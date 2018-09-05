@@ -1,0 +1,19 @@
+{
+  "name": "signafire-tht",
+  "version": "1.0.0",
+  "description": "Take-Home Test of Signafire API Engineer Position",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "blipp": "^3.0.0",
+    "elasticsearch": "^15.1.1",
+    "good": "^8.1.1",
+    "good-console": "^7.1.0",
+    "good-squeeze": "^5.1.0",
+    "hapi": "^17.5.4"
+  },
+  "author": "Rob Debbane",
+  "license": "MIT"
+}
