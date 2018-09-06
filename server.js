@@ -11,7 +11,10 @@ const options = {
     myConsoleReporter: [{
       module: 'good-squeeze',
       name: 'Squeeze',
-      args: [{ logs: '*', args: '*' }]
+      args: [{
+        logs: '*',
+        args: '*'
+      }]
     }, {
       module: 'good-console',
     }, 'stdout']
@@ -21,12 +24,19 @@ const options = {
 async function start() {
   try {
     await server.register([{
-      plugin: require('good'),
-      options
-    },
-    {
-      plugin: require('blipp')
-    }]);
+        plugin: require('good'),
+        options
+      },
+      {
+        plugin: require('blipp')
+      },
+      {
+        plugin: require('./database')
+      },
+      {
+        plugin: require('./routes')
+      }
+    ]);
     await server.start();
   } catch (err) {
     console.error(err);
