@@ -21,14 +21,14 @@ exports.plugin = {
         }
       });
       if (accesses.length === 0) {
-        throw Boom.notFound('This user does not have access to any indeces')
+        throw Boom.notFound('This user does not have access to any indices')
       }
       return accesses;
     }
 
-    const processSearch = async (indeces, searchName) => {
+    const processSearch = async (indices, searchName) => {
       const esResults = await server.esClient.search({
-        index: indeces,
+        index: indices,
         type: 'docs',
         body: {
           query: {
@@ -51,7 +51,7 @@ exports.plugin = {
       method: 'GET',
       path: '/users/{name}',
       options: {
-        description: 'Lists all elasticsearch indeces the user has access to'
+        description: 'Lists all elasticsearch indices the user has access to'
       },
       handler: async (request, h) => {
         try {
