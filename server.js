@@ -3,7 +3,7 @@
 const Hapi = require('hapi');
 const server = new Hapi.server({
   host: process.env.SERVER_URL || 'localhost',
-  port: process.env.SERVER_PORT || 8080,
+  port: process.env.SERVER_PORT || 80,
 });
 
 const options = {
