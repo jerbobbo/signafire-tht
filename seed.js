@@ -5,6 +5,9 @@ module.exports = async function({User, Index, Access}) {
   const bar = await User.create({
     name: 'bar',
   });
+  const bazz = await User.create({
+    name: 'bazz',
+  });
   const fooIndex = await Index.create({
     name: 'foo_index',
   })

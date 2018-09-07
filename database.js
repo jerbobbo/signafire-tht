@@ -66,4 +66,4 @@ exports.plugin = {
     await dbSeed(db);
     console.log('Database seeded');
   }
-}
+};
