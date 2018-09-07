@@ -35,6 +35,9 @@ async function start() {
       },
       {
         plugin: require('./routes')
+      },
+      {
+        plugin: require('./elasticsearch')
       }
     ]);
     await server.start();
