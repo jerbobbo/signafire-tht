@@ -28,5 +28,18 @@
   GET    /users/{name}                  Lists all elasticsearch indices the user has access to
   GET    /users/{name}/search           Returns elasticsearch results for all users whose first name matches the querystring parameter q
 ```
+
+### Sample cURL Commands
+
+- Fetching indexes available to a user (user `foo` in this example:)
+```
+curl -X GET http://localhost:80/users/foo 
+```
+
+- Searching all documents by first_name in elasticsearch indices available to given user
+```
+curl -X GET http://localhost:80/users/foo/search?q=fred
+```
+
 ## TO DO
 - Create a frontend with server-side rendered views with a search form that will display results when the form is submitted
